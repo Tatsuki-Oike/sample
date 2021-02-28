@@ -416,21 +416,46 @@ summary {
 <div id="TOC">
 <ul>
 <li><a href="#タイトル1">タイトル1</a><ul>
-<li><a href="#サブタイトル1">サブタイトル1</a></li>
-<li><a href="#サブタイトル2">サブタイトル2</a></li>
+<li><a href="#サブタイトル1.1-文章">サブタイトル1.1 (文章)</a></li>
+<li><a href="#サブタイトル1.2-箇条書き">サブタイトル1.2 (箇条書き)</a></li>
+<li><a href="#サブタイトル1.3-表作成">サブタイトル1.3 (表作成)</a></li>
 </ul></li>
-<li><a href="#タイトル2">タイトル2</a></li>
+<li><a href="#タイトル2">タイトル2</a><ul>
+<li><a href="#サブタイトル2.1-rコード">サブタイトル2.1 (rコード)</a></li>
+<li><a href="#サブタイトル2.2-rコード-表関数使用">サブタイトル2.2 (rコード 表関数使用)</a></li>
+</ul></li>
 </ul>
 </div>
 
 <!--コメント-->
-<div id="タイトル1" class="section level1 tabset">
+<div id="タイトル1" class="section level1">
 <h1>タイトル1</h1>
-<div id="サブタイトル1" class="section level2">
-<h2>サブタイトル1</h2>
-<p>文章は普通に記述(1)</p>
-<p><span style="color:blue"> 青色 </span></p>
-<!--表作成-->
+<!--水平線-->
+<hr />
+<p><br> <!--改行--></p>
+<div id="サブタイトル1.1-文章" class="section level2">
+<h2>サブタイトル1.1 (文章)</h2>
+<p>通常の文章 <span style="color:blue"> 青色 </span> <strong>強調</strong></p>
+<p><br> <!--改行--></p>
+</div>
+<div id="サブタイトル1.2-箇条書き" class="section level2">
+<h2>サブタイトル1.2 (箇条書き)</h2>
+<ul>
+<li>箇条書き1
+<ul>
+<li>箇条書き1.1</li>
+<li>箇条書き1.2</li>
+</ul></li>
+<li>箇条書き2
+<ul>
+<li>箇条書き2.1</li>
+<li>箇条書き2.2</li>
+</ul></li>
+</ul>
+<p><br> <!--改行--></p>
+</div>
+<div id="サブタイトル1.3-表作成" class="section level2">
+<h2>サブタイトル1.3 (表作成)</h2>
 <table>
 <thead>
 <tr class="header">
@@ -454,10 +479,14 @@ summary {
 </table>
 <p><br> <!--改行--></p>
 </div>
-<div id="サブタイトル2" class="section level2">
-<h2>サブタイトル2</h2>
-<p>文章は普通に記述(2)</p>
-<!--rコード-->
+</div>
+<div id="タイトル2" class="section level1 tabset">
+<h1>タイトル2</h1>
+<!--水平線-->
+<hr />
+<p><br> <!--改行--></p>
+<div id="サブタイトル2.1-rコード" class="section level2">
+<h2>サブタイトル2.1 (rコード)</h2>
 <pre class="r"><code>library(dplyr)
 iris %&gt;% head()</code></pre>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
@@ -467,10 +496,69 @@ iris %&gt;% head()</code></pre>
 ## 4          4.6         3.1          1.5         0.2  setosa
 ## 5          5.0         3.6          1.4         0.2  setosa
 ## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<p><br> <!--改行--></p>
 </div>
+<div id="サブタイトル2.2-rコード-表関数使用" class="section level2">
+<h2>サブタイトル2.2 (rコード 表関数使用)</h2>
+<pre class="r"><code>library(knitr)
+iris %&gt;% head() %&gt;% kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Sepal.Length</th>
+<th align="right">Sepal.Width</th>
+<th align="right">Petal.Length</th>
+<th align="right">Petal.Width</th>
+<th align="left">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">5.1</td>
+<td align="right">3.5</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.9</td>
+<td align="right">3.0</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">4.7</td>
+<td align="right">3.2</td>
+<td align="right">1.3</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">4.6</td>
+<td align="right">3.1</td>
+<td align="right">1.5</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="odd">
+<td align="right">5.0</td>
+<td align="right">3.6</td>
+<td align="right">1.4</td>
+<td align="right">0.2</td>
+<td align="left">setosa</td>
+</tr>
+<tr class="even">
+<td align="right">5.4</td>
+<td align="right">3.9</td>
+<td align="right">1.7</td>
+<td align="right">0.4</td>
+<td align="left">setosa</td>
+</tr>
+</tbody>
+</table>
+<p><br> <!--改行--></p>
 </div>
-<div id="タイトル2" class="section level1">
-<h1>タイトル2</h1>
 </div>
 
 
